@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient2"
+    tools:context=".PhoneAuth">
+
+  <TextView
+      android:id="@+id/textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Crerate New Account"
+      android:textColor="#FFFFFF"
+      android:textSize="30dp"
+      app:layout_constraintBottom_toTopOf="@+id/phoneNo"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.515"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.544" />
+
+  <EditText
+      android:id="@+id/phoneNo"
+      android:layout_width="0dp"
+      android:layout_height="50dp"
+      android:layout_marginStart="75dp"
+      android:layout_marginEnd="25dp"
+      android:background="@drawable/et_bg"
+      android:gravity="center_vertical"
+      android:hint="Enter Phone Number"
+      android:inputType="number|phone"
+      android:paddingStart="10dp"
+      android:textColor="#FFFFFF"
+      android:textColorHint="@color/login_form_details"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.387" />
+
+  <EditText
+      android:id="@+id/TextOtp"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="25dp"
+      android:layout_marginEnd="25dp"
+      android:background="@drawable/et_bg"
+      android:hint="Enter OTP"
+      android:inputType="number|phone"
+      android:padding="16dp"
+      android:textColorHint="@color/login_form_details"
+      android:visibility="gone"
+      app:layout_constraintBottom_toTopOf="@+id/verify"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/phoneNo"
+      app:layout_constraintVertical_bias="0.277" />
+
+  <Button
+      android:id="@+id/verify"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="80dp"
+      android:layout_marginEnd="80dp"
+      android:background="@drawable/btn_bg"
+      android:text="Send OTP"
+      android:textAllCaps="false"
+      android:textColor="@color/login_form_details_medium"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/phoneNo"
+      app:layout_constraintVertical_bias="0.388" />
+
+  <ProgressBar
+      android:id="@+id/phoneAuthProgreeBar"
+      style="?android:attr/progressBarStyle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/verify"
+      app:layout_constraintVertical_bias="0.176" />
+
+  <TextView
+      android:id="@+id/textView2"
+      android:layout_width="wrap_content"
+      android:layout_height="50dp"
+      android:layout_marginStart="25dp"
+      android:background="@drawable/et_bg"
+      android:foregroundGravity="center_vertical|center_horizontal"
+      android:gravity="center_horizontal|center_vertical"
+      android:inputType="number|phone"
+      android:padding="10dp"
+      android:text="+91"
+      android:textColor="#FFFFFF"
+      android:textColorHint="@color/login_form_details"
+      android:textSize="18sp"
+      app:layout_constraintBottom_toBottomOf="@+id/phoneNo"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/phoneNo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/user_display_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/default_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/user_display_name"
+        android:layout_width="319dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="9dp"
+        android:layout_toStartOf="@+id/user_online_dot"
+        android:layout_toEndOf="@+id/user_display_image"
+        android:gravity="fill|center_vertical"
+        android:text="AMAN KUMAR SINGH"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toEndOf="@+id/user_display_image" />
+
+    <TextView
+        android:id="@+id/user_display_status"
+        android:layout_width="320dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/user_display_name"
+        android:layout_alignBottom="@id/user_display_image"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="0dp"
+        android:layout_toStartOf="@+id/user_online_dot"
+        android:layout_toEndOf="@+id/user_display_image"
+        android:text="User default status"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/user_display_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/user_display_image"
+        app:layout_constraintTop_toBottomOf="@+id/user_display_name" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="370dp"
+        android:layout_height="1dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <ImageView
+        android:id="@+id/user_online_dot"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/greendot" />
+</RelativeLayout>
